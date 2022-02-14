@@ -19,6 +19,8 @@ void loop(){
   checkPushed();
   
   // accelerometer stuff
+  // testing github
+  
   positioning();
   checkPositions();
   
