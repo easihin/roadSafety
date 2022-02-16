@@ -5,11 +5,13 @@ TinyGPSPlus gps;
 // (TX, RX)
 SoftwareSerial gps_ss(2, 0);
 
+float LAT, LONG;
+
 using namespace std;
 
 std::tuple<float, float> getLocation() {
-  float LAT = gps.location.lat();
-  float LONG = gps.location.lng();
+  LAT = gps.location.lat();
+  LONG = gps.location.lng();
 
   while (gps_ss.available() > 0) {   
       if (gps.encode(gps_ss.read())) {
@@ -34,5 +36,5 @@ int getSpeed() {
 }
 
 void beginGPS() {
-    gps_ss.begin(9600);
+  gps_ss.begin(9600);
 }

@@ -9,10 +9,12 @@ int checkPushed();
 std::tuple<float, float> getLocation();
 void beginGPS();
 int getSpeed();
+int checkTime();
 
 // lcd
 void startLCD();
 void printLCD(int);
+void safeDriving();
 
 // water sensor
 int getWaterValue();

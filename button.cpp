@@ -6,11 +6,14 @@ int buttonVal;
  // push button 
 int checkPushed() {
     buttonVal = digitalRead(15);
-    // Serial.print("Button Val = ");
-    // Serial.println(buttonVal);
+
+    // if the driver clicks, it means that the driver needs help
+    // testing of server and sendLocation function
     if (buttonVal == 1) {
         sendLocation();
     }
+    Serial.println("Button Val: " + buttonVal);
+
     publishtoServer(buttonVal); 
     return buttonVal;
 }

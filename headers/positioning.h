@@ -2,7 +2,7 @@
 #define POSITIONING_H
 
 void initAccel();
-int positioning();
+void positioning();
 void checkPositions();
 
 #endif

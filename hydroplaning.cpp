@@ -1,15 +1,21 @@
 #include "headers/global.h"
 
-// might send a message, don't know yet
+int tyrePressure, waterThreshold, isHydroplaning;
+float speedThreshold;
+
 void riskHydroplaning(){
-    int tyrePressure = 35; //psi
-    int waterThreshold = 0; //0.3 cm on the sensor is some value idk yet
-    float speedThreshold =  10.35 * sqrt(tyrePressure); // how many km/h
-    int isHydroplaning;
+    safeDriving();
+    tyrePressure = 35; //psi
+    waterThreshold = 280; //0.25 cm on the sensor 
+    speedThreshold =  10.35 * sqrt(tyrePressure); // how many km/h
     
+    isHydroplaning = 0;
+
     if (getWaterValue() > waterThreshold && getSpeed() > speedThreshold) {
         isHydroplaning = 1;
         printLCD(isHydroplaning);
+    } else if (getWaterValue() > waterThreshold) {
+        isHydroplaning = 2;
     }
     isHydroplaning = 0;
 }

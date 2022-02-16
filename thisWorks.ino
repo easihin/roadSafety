@@ -18,22 +18,16 @@ void loop(){
   // push button
   checkPushed();
   
-  // accelerometer stuff
-  // testing github
-  
+  // accelerometer
   positioning();
   checkPositions();
   
-  // is it hydroplaning? just letting this thing run and loop around
+  // constantly check hydroplaning
   riskHydroplaning();
   
   delay(100);
-
-  // this might be stupid because idk if the other values can overwrite this. needs to loop around tho
-  printLCD(0);
   
   // Reconnect
   checkConnection();
   clientLoop();
-  
 }

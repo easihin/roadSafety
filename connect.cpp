@@ -81,21 +81,20 @@ void sendLocation() {
 void sendMessage(int val) {
   // val 1 -- flipped over
   // val 2 -- on the side
-  // val 3 -- submerged
-  // val 4 -- extreme deceleration
+  // val 3 -- extreme deceleration
   
+  // if they need to sendMessage, make sure you sendLocation too ^
   sendLocation();
 
   if (val == 1) {
-    // send some message to Tasia 
-    // or send the value in some topic and all the if statements will on the app.
-    // dk
+    snprintf (msgmqtt, 50, "%d ", val);
+    client.publish("Flipped", msgmqtt);
   } else if (val == 2) {
-    // send smth
+    snprintf (msgmqtt, 50, "%d ", val);
+    client.publish("Side", msgmqtt);
   } else if (val == 3) {
-    // send smth
-  } else if (val == 4) {
-    // send smth
+    snprintf (msgmqtt, 50, "%d ", val);
+    client.publish("CarCrash", msgmqtt);
   }
 }
 
@@ -103,16 +102,4 @@ void sendMessage(int val) {
 void publishtoServer(int val) {
     snprintf (msgmqtt, 50, "%d ", val);
     client.publish("isPushed", msgmqtt);
-    
-    // snprintf (msgmqtt, 50, "%d", watersensorValue);
-    // client.publish("watersensorValue", msgmqtt);
-    
-    // snprintf (msgmqtt, 50, "%d", x_val);
-    // client.publish("xVal",msgmqtt);
-    
-    // snprintf (msgmqtt, 50, "%d", y_val);
-    // client.publish("yVal",msgmqtt);
-    // 
-    // snprintf (msgmqtt, 50, "%d", z_val);
-    // client.publish("zVal",msgmqtt);
 }
