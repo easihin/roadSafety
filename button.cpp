@@ -12,7 +12,8 @@ int checkPushed() {
     if (buttonVal == 1) {
         sendLocation();
     }
-    Serial.println("Button Val: " + buttonVal);
+    // Serial.print("Button Val: " );
+    // Serial.println(buttonVal);
 
     publishtoServer(buttonVal); 
     return buttonVal;

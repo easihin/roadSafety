@@ -35,7 +35,7 @@
                 "/Users/maureenlo/Library/Arduino15/packages/esp8266/hardware/esp8266/3.0.2/tools/sdk/lwip2/include",
                 "/Users/maureenlo/Library/Arduino15/packages/esp8266/hardware/esp8266/3.0.2/cores/esp8266",
                 "/Users/maureenlo/Library/Arduino15/packages/esp8266/hardware/esp8266/3.0.2/variants/nodemcu",
-                "/Users/maureenlo/Documents/Arduino/libraries/TinyGPSPlus-master/src",
+                "/Users/maureenlo/Documents/Arduino/libraries/TinyGPSPlus-1.0.2/src",
                 "/Users/maureenlo/Library/Arduino15/packages/esp8266/hardware/esp8266/3.0.2/libraries/SoftwareSerial/src",
                 "/Users/maureenlo/Library/Arduino15/packages/esp8266/hardware/esp8266/3.0.2/libraries/ESP8266WiFi/src",
                 "/Users/maureenlo/Documents/Arduino/libraries/PubSubClient/src",

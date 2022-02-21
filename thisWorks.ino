@@ -19,7 +19,6 @@ void loop(){
   checkPushed();
   
   // accelerometer
-  positioning();
   checkPositions();
   
   // constantly check hydroplaning

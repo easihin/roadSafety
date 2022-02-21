@@ -80,8 +80,7 @@ void sendLocation() {
 
 void sendMessage(int val) {
   // val 1 -- flipped over
-  // val 2 -- on the side
-  // val 3 -- extreme deceleration
+  // val 2 -- extreme deceleration
   
   // if they need to sendMessage, make sure you sendLocation too ^
   sendLocation();
@@ -91,10 +90,7 @@ void sendMessage(int val) {
     client.publish("Flipped", msgmqtt);
   } else if (val == 2) {
     snprintf (msgmqtt, 50, "%d ", val);
-    client.publish("Side", msgmqtt);
-  } else if (val == 3) {
-    snprintf (msgmqtt, 50, "%d ", val);
-    client.publish("CarCrash", msgmqtt);
+    client.publish("Crashed", msgmqtt); 
   }
 }
 

@@ -16,6 +16,6 @@ void riskHydroplaning(){
         printLCD(isHydroplaning);
     } else if (getWaterValue() > waterThreshold) {
         isHydroplaning = 2;
+        printLCD(isHydroplaning);
     }
-    isHydroplaning = 0;
 }
