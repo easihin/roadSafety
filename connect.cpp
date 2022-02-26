@@ -84,14 +84,9 @@ void sendMessage(int val) {
   
   // if they need to sendMessage, make sure you sendLocation too ^
   sendLocation();
-
-  if (val == 1) {
-    snprintf (msgmqtt, 50, "%d ", val);
-    client.publish("Flipped", msgmqtt);
-  } else if (val == 2) {
-    snprintf (msgmqtt, 50, "%d ", val);
-    client.publish("Crashed", msgmqtt); 
-  }
+  
+  snprintf (msgmqtt, 50, "%d ", val);
+  client.publish("Position", msgmqtt);
 }
 
 // kinda temporary because these values are rather useless to send

@@ -6,7 +6,7 @@ String message;
 
 void startLCD() {
    lcd.begin();
-    Wire.begin();
+   Wire.begin();
 }
 
 // if nothing bad is happening
@@ -22,9 +22,9 @@ void printLCD(int received) {
 
     // val 1 -- hydroplaning risk
     if (received == 1) {
-        message = "Aquaplaning Risk!";
+        message = "Aquaplaning risk";
     } else if (received == 2) {
-        message = "Wet Road, stay slow";
-    }
+        message = "Wet Road";
+    } 
     lcd.print(message);
 }

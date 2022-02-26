@@ -20,8 +20,31 @@
 
 // header files
 #include "connect.h"
-#include "positioning.h"
-#include "sensors.h"
-#include "hydroplaning.h"
+
+// hydroplaning
+void riskHydroplaning();
+
+// positioning
+void initAccel();
+void positioning();
+void checkPositions();
+
+// button
+extern int buttonVal;
+int checkPushed();
+
+// gps
+std::tuple<float, float> getLocation();
+void beginGPS();
+int getSpeed();
+int checkTime();
+
+// lcd
+void startLCD();
+void printLCD(int);
+void safeDriving();
+
+// water sensor
+int getWaterValue();
 
 #endif
