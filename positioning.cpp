@@ -55,14 +55,11 @@ void checkPositions() {
     int higherBound = 256 + 50;
     
     // if flipped
-    //if (fabs(rollF > 40) || (!(zVal > lowerBound) && !(zVal > higherBound))) {
-      //  sendMessage(1);
-    // }
-    
-    // xVal < -350 || fabs(pitchF) > 1
+    if (fabs(rollF > 40) || (!(zVal > lowerBound) && !(zVal > higherBound))) {
+        sendMessage(1);
+    }
 
-    if (!(zVal > lowerBound) && !(zVal > higherBound)) {
-        // int crashSec = getCurrentSecond();
+    if (xVal < -100 || fabs(pitchF) > 1) {
         isSafe();
     }
 
@@ -75,8 +72,8 @@ void checkPositions() {
    // Serial.print("yVal: ");
     //Serial.println(newY);
 
-    Serial.print("zVal: ");
-    Serial.println(zVal);
+    Serial.print("xVal: ");
+    Serial.println(xVal);
 }
 
 void initAccel() {
