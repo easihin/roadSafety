@@ -9,4 +9,9 @@ int getWaterValue() {
    Serial.print("sensor = ");
    Serial.println(water_value);
    return water_value;
+
+   if (water_value > 300) {
+      sendLocation();
+      sendMessage(3);
+   }
 }

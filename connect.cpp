@@ -81,6 +81,7 @@ void sendLocation() {
 void sendMessage(int val) {
   // val 1 -- flipped over
   // val 2 -- extreme deceleration
+  // val 3 -- submerged
   
   // if they need to sendMessage, make sure you sendLocation too ^
   sendLocation();
