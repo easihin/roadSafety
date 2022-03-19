@@ -14,12 +14,11 @@ void riskHydroplaning() {
 
     if (getWaterValue() > waterThreshold && getSpeed() > speedThreshold) {
       isHydroplaning = 1;
+      sendMessage(4);
       printLCD(isHydroplaning);
     } else if (getWaterValue() > waterThreshold) {
       isHydroplaning = 2;
       printLCD(isHydroplaning);
     }
 
-    // if submerged
-    // sendMessage(3);
 }

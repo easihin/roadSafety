@@ -82,8 +82,9 @@ void sendMessage(int val) {
   // val 1 -- flipped over
   // val 2 -- extreme deceleration
   // val 3 -- submerged
+  // val 4 -- risk of hydroplaning
   
-  // if they need to sendMessage, make sure you sendLocation too ^
+  // if they need to sendMessage, make sure you sendLocation too 
   sendLocation();
   
   snprintf (msgmqtt, 50, "%d ", val);

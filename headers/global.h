@@ -17,6 +17,9 @@
 #include <iostream>
 #include <math.h>
 #include <tuple>
+#include <unistd.h>
+#include <stdlib.h>
+
 
 // header files
 #include "connect.h"
@@ -38,6 +41,8 @@ std::tuple<float, float> getLocation();
 void beginGPS();
 int getSpeed();
 int checkTime();
+void isSafe();
+// int getCurrentSecond();
 
 // lcd
 void startLCD();

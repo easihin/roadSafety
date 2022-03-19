@@ -6,8 +6,8 @@ int water_value;
 
 int getWaterValue() {
    water_value = analogRead(analogwaterPin);
-   Serial.print("sensor = ");
-   Serial.println(water_value);
+   // Serial.print("sensor = ");
+   // Serial.println(water_value);
    return water_value;
 
    if (water_value > 300) {

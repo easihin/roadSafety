@@ -9,9 +9,9 @@ int checkPushed() {
 
     // if the driver clicks, it means that the driver needs help
     // testing of server and sendLocation function
-    if (buttonVal == 1) {
-        sendLocation();
-    }
+    // if (buttonVal == 1) {
+    //     sendLocation();
+    // }
     // Serial.print("Button Val: " );
     // Serial.println(buttonVal);
 

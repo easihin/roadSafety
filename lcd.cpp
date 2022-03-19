@@ -25,6 +25,11 @@ void printLCD(int received) {
         message = "Aquaplaning risk";
     } else if (received == 2) {
         message = "Wet Road";
-    } 
+    } else if (received == 3) {
+        message = "Hold Button";
+    } else if (received == 4) {
+        message = "Help!";
+    }
+    
     lcd.print(message);
 }

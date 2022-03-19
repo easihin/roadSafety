@@ -55,23 +55,28 @@ void checkPositions() {
     int higherBound = 256 + 50;
     
     // if flipped
-    if (fabs(rollF > 40) || (!(zVal > lowerBound) && !(zVal > higherBound))) {
-        sendMessage(1);
+    //if (fabs(rollF > 40) || (!(zVal > lowerBound) && !(zVal > higherBound))) {
+      //  sendMessage(1);
+    // }
+    
+    // xVal < -350 || fabs(pitchF) > 1
+
+    if (!(zVal > lowerBound) && !(zVal > higherBound)) {
+        // int crashSec = getCurrentSecond();
+        isSafe();
     }
 
-    // extreme deceleration
-    if (xVal < -350 || fabs(pitchF) > 2) {
-      sendMessage(2);
-    }
+   // Serial.print("pitchF: ");
+    //Serial.println(pitchF);
 
-    Serial.print("pitchF: ");
-    Serial.println(pitchF);
+    //Serial.print("xVal: ");
+    //Serial.println(newX);
 
-    Serial.print("xVal: ");
-    Serial.println(xVal);
+   // Serial.print("yVal: ");
+    //Serial.println(newY);
 
-    Serial.print("yVal: ");
-    Serial.println(yVal);
+    Serial.print("zVal: ");
+    Serial.println(zVal);
 }
 
 void initAccel() {
