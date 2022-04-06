@@ -12,13 +12,17 @@ void riskHydroplaning() {
     
     isHydroplaning = 0;
 
-    if (getWaterValue() > waterThreshold && getSpeed() > speedThreshold) {
+    // if (getWaterValue() > waterThreshold && getSpeed() > speedThreshold) {
+    if (getWaterValue() > 20) {
       isHydroplaning = 1;
+      printLCD(isHydroplaning);
       sendMessage(4);
-      printLCD(isHydroplaning);
-    } else if (getWaterValue() > waterThreshold) {
-      isHydroplaning = 2;
-      printLCD(isHydroplaning);
     }
+      // printLCD(isHydroplaning);
+    //} else if (getWaterValue() > waterThreshold) {
+      //isHydroplaning = 2;
+      // printLCD(isHydroplaning);
+      //sendMessage(5);
+    //}
 
 }

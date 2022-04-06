@@ -36,10 +36,9 @@ std::tuple<int, int, int> rawPositions() {
 void checkPositions() {
     auto [xVal, yVal, zVal] = rawPositions();
 
-    // offset found when ADXL is flat on the ground
-    int xOffset = -6;
-    int yOffset = 15;
-    int zOffset = -30;
+    int xOffset = -10;
+    int yOffset = 120;
+    int zOffset = 13;
 
     float newX = current.callibrate(xVal, xOffset);
     float newY = current.callibrate(yVal, yOffset);
@@ -55,25 +54,25 @@ void checkPositions() {
     int higherBound = 256 + 50;
     
     // if flipped
-    if (fabs(rollF > 40) || (!(zVal > lowerBound) && !(zVal > higherBound))) {
+    if (fabs(pitchF > 40) || (!(zVal + zOffset > lowerBound) && !(zVal + zOffset > higherBound))) {
         sendMessage(1);
     }
 
-    if (xVal < -100 || fabs(pitchF) > 1) {
+    if (yVal + yOffset < -100 || fabs(rollF) > 1) {
         isSafe();
-    }
+     }
 
    // Serial.print("pitchF: ");
     //Serial.println(pitchF);
 
-    //Serial.print("xVal: ");
-    //Serial.println(newX);
+    Serial.print("zVal: ");
+    Serial.println(zVal + zOffset);
 
-   // Serial.print("yVal: ");
-    //Serial.println(newY);
+    Serial.print("yVal: ");
+    Serial.println(yVal + yOffset);
 
     Serial.print("xVal: ");
-    Serial.println(xVal);
+    Serial.println(xVal + xOffset);
 }
 
 void initAccel() {
