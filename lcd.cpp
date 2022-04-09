@@ -22,7 +22,7 @@ void printLCD(int received) {
 
     // val 1 -- hydroplaning risk
     if (received == 1) {
-        message = "Aquaplaning risk";
+        message = "Slow Down!";
     } else if (received == 2) {
         message = "Wet Road";
     } else if (received == 3) {

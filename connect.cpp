@@ -83,13 +83,11 @@ void sendMessage(int val) {
   // val 2 -- extreme deceleration
   // val 3 -- submerged
   // val 4 -- risk of hydroplaning
-  // val 5 -- wet road
   
-  // if they need to sendMessage, make sure you sendLocation too 
   sendLocation();
   
   snprintf (msgmqtt, 50, "%d ", val);
-  client.publish("Status", msgmqtt);
+  client.publish("Position", msgmqtt);
   
 }
 

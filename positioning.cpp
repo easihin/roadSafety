@@ -37,7 +37,7 @@ void checkPositions() {
     auto [xVal, yVal, zVal] = rawPositions();
 
     int xOffset = -10;
-    int yOffset = 120;
+    int yOffset = 100;
     int zOffset = 13;
 
     float newX = current.callibrate(xVal, xOffset);
@@ -54,25 +54,21 @@ void checkPositions() {
     int higherBound = 256 + 50;
     
     // if flipped
-    if (fabs(pitchF > 40) || (!(zVal + zOffset > lowerBound) && !(zVal + zOffset > higherBound))) {
+    if (fabs(pitchF > 1.5) || (!(zVal + zOffset > lowerBound) && !(zVal + zOffset > higherBound))) {
         sendMessage(1);
+        isSafe();
     }
 
-    if (yVal + yOffset < -100 || fabs(rollF) > 1) {
+    // extreme deceleration
+    if (yVal + yOffset < -100 || fabs(rollF) > 1.5) {
         isSafe();
      }
 
-   // Serial.print("pitchF: ");
-    //Serial.println(pitchF);
+    Serial.print("pitchF: ");
+    Serial.println(pitchF);
+    Serial.print("rollF: ");
+    Serial.println(rollF);
 
-    Serial.print("zVal: ");
-    Serial.println(zVal + zOffset);
-
-    Serial.print("yVal: ");
-    Serial.println(yVal + yOffset);
-
-    Serial.print("xVal: ");
-    Serial.println(xVal + xOffset);
 }
 
 void initAccel() {
