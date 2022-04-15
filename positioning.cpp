@@ -54,7 +54,7 @@ void checkPositions() {
     int higherBound = 256 + 50;
     
     // if flipped
-    if (fabs(pitchF > 1.5) || (!(zVal + zOffset > lowerBound) && !(zVal + zOffset > higherBound))) {
+    if (fabs(pitchF > 1.5) || (!(zVal + zOffset > lowerBound) && !(zVal + zOffset < higherBound))) {
         sendMessage(1);
         isSafe();
     }
