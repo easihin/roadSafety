@@ -90,9 +90,3 @@ void sendMessage(int val) {
   client.publish("Position", msgmqtt);
   
 }
-
-// kinda temporary because these values are rather useless to send
-void publishtoServer(int val) {
-    snprintf (msgmqtt, 50, "%d ", val);
-    client.publish("isPushed", msgmqtt);
-}
