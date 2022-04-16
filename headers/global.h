@@ -41,8 +41,7 @@ std::tuple<float, float> getLocation();
 void beginGPS();
 int getSpeed();
 int checkTime();
-void isSafe();
-// int getCurrentSecond();
+void isSafe(int);
 
 // lcd
 void startLCD();
