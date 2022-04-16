@@ -1,4 +1,4 @@
-# Prototype of Device that Recognizes Car Crashes and Risks for Hydroplaning
+# Prototype of Device that Recognizes Car Crashes and Risks of Hydroplaning
 #### By: Ella Vania Asihin and Elizabeth Fantasia Wibawa (2022) 
 
 - when testing the code, make sure that it is in a folder of what the .ino file's name is.
