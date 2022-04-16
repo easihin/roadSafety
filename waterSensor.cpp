@@ -12,7 +12,7 @@ int getWaterValue() {
    // submerged
    if (water_value > 300) {
       sendMessage(3);
-      isSafe();
+      isSafe(3);
    }
    return water_value;
 
