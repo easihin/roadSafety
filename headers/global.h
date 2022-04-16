@@ -31,6 +31,7 @@ void riskHydroplaning();
 void initAccel();
 void positioning();
 void checkPositions();
+void isSafe(int);
 
 // button
 extern int buttonVal;
@@ -41,8 +42,6 @@ std::tuple<float, float> getLocation();
 void beginGPS();
 int getSpeed();
 int checkTime();
-void isSafe();
-// int getCurrentSecond();
 
 // lcd
 void startLCD();

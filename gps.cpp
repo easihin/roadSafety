@@ -38,25 +38,3 @@ int getSpeed() {
 void beginGPS() {
   gps_ss.begin(9600);
 }
-
-void isSafe() {
-  int seconds = 0;
-  bool toRun = true;
-  int message = 3;
-  while (toRun == true) {
-      printLCD(message);
-      delay(1000);
-      
-      seconds++;
-      cout << seconds << " sec " << endl;
- 
-      if (seconds >= 10) {
-        sendMessage(2);
-        message = 4;
-        Serial.println("not safe");
-     } else if (checkPushed() == 1) {
-        toRun = false;
-        Serial.println("safe");
-     }
-   }
-}
