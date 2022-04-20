@@ -8,3 +8,4 @@ Brief Description: A prototype of a budget friendly road safety device that dete
 
 - Poster: https://drive.google.com/file/d/1jJibWYerDscpLrcmcQO9GuALPdlSCTHg/view?usp=sharing
 - Video: https://www.youtube.com/watch?v=xNXBaQ7-klw
+- Logbook: https://drive.google.com/file/d/1sV5iFlHYsSvUEdDyUby7xgcNgoeI1Z_C/view?usp=sharing
