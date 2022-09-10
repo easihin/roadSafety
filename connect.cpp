@@ -3,8 +3,8 @@
 WiFiClient espClient;
 PubSubClient client(espClient);
 
-char wifiName[10] = "My ASUS"; 
-char wifiPass[20] = "12345667889";
+char wifiName[10] = ""; //don't forget to fill in!
+char wifiPass[20] = "";
 
 void connectMQTT() {
   while (!client.connected()) {
