@@ -1,7 +1,6 @@
 # Prototype of Device that Recognizes Car Crashes and Risks of Hydroplaning
 #### By: Ella Vania Asihin and Elizabeth Fantasia Wibawa (2022) 
 
-- when testing the code, make sure that it is in a folder of what the .ino file's name is.
 - Submission for Krya Innovation Award 2022
 
 Top 6 ICIA x IFIC 2022, Most Innovative Award - IFIC, Titanium Award
